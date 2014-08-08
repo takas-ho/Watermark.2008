@@ -31,7 +31,7 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button3 = New System.Windows.Forms.Button
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Watermark1 = New WatermarkSample.Watermark
+        Me.Watermark1 = New WatermarkSample.WatermarkTextBox
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -124,7 +124,7 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Watermark1 As Watermark
+    Friend WithEvents Watermark1 As WatermarkTextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox

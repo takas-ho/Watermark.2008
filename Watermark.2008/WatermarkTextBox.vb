@@ -1,6 +1,6 @@
 ﻿Imports System.ComponentModel
 
-Public Class Watermark
+Public Class WatermarkTextBox
     Inherits TextBox
 
     'Declare A Few Variables
