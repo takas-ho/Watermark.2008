@@ -8,11 +8,11 @@ Public Class WatermarkTextBox
     Inherits TextBox
 
     'Declare A Few Variables
-    Dim WaterText As String
-    Dim WaterColor As Color
-    Dim WaterFont As Font
-    Dim WaterBrush As SolidBrush
-    Dim WaterContainer As Panel
+    Friend WaterText As String
+    Friend WaterColor As Color
+    Friend WaterFont As Font
+    Friend WaterBrush As SolidBrush
+    Friend WaterContainer As Panel
 
 #Region "Public properties..."
     <Category("Watermark Attributes"), Description("Sets Watermark Text")> Public Property WatermarkText() As String
