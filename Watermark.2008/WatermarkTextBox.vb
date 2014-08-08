@@ -35,6 +35,17 @@ Public Class WatermarkTextBox
             Me.Invalidate()
         End Set
     End Property
+
+    <Category("Watermark Attributes"), Description("Sets Watermark Font")> _
+    Public Property WatermarkFont() As Font
+        Get
+            Return WaterFont
+        End Get
+        Set(ByVal value As Font)
+            WaterFont = value
+            Me.Invalidate()
+        End Set
+    End Property
 #End Region
 
     Public Sub New()
@@ -43,13 +54,12 @@ Public Class WatermarkTextBox
         'Assign Values To the Variables
         WaterText = "Default Watermark"
         WaterColor = Color.Gray
-        WaterFont = New Font(Me.Font, FontStyle.Italic)
+        WaterFont = Me.Font
         WaterBrush = New SolidBrush(WaterColor)
 
         CreateWatermark()
 
         AddHandler TextChanged, AddressOf ChangeText
-        AddHandler FontChanged, AddressOf ChangeFont
     End Sub
 
     Private Sub CreateWatermark()
@@ -69,10 +79,6 @@ Public Class WatermarkTextBox
         Else 'If Me.TextLength > 0 Then
             RemoveWatermark()
         End If
-    End Sub
-
-    Private Sub ChangeFont(ByVal sender As Object, ByVal e As EventArgs)
-        WaterFont = New Font(Me.Font, FontStyle.Italic)
     End Sub
 
     Private Sub Clicked(ByVal sender As Object, ByVal e As EventArgs)
