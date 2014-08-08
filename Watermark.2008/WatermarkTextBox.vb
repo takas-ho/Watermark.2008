@@ -61,7 +61,7 @@ Public Class WatermarkTextBox
     Private Sub ChangeText(ByVal sender As Object, ByVal e As EventArgs)
         If Me.TextLength <= 0 Then
             CreateWatermark()
-        ElseIf Me.TextLength > 0 Then
+        Else 'If Me.TextLength > 0 Then
             RemoveWatermark()
         End If
     End Sub
