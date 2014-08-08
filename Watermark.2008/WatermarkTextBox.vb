@@ -34,10 +34,7 @@ Public Class WatermarkTextBox
 
     Public Sub New()
         MyBase.New()
-        StartProcess()
-    End Sub
 
-    Private Sub StartProcess()
         'Assign Values To the Variables
         WaterText = "Default Watermark"
         WaterColor = Color.Gray
