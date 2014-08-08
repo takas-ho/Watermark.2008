@@ -1,5 +1,9 @@
 ﻿Imports System.ComponentModel
 
+''' <summary>
+''' Watermark/Placeholder を実現するテキストボックス
+''' </summary>
+''' <remarks>http://www.youtube.com/watch?v=db8w3r_KNz8</remarks>
 Public Class WatermarkTextBox
     Inherits TextBox
 
