@@ -10,6 +10,28 @@ Public Class WatermarkTextBox
     Dim WaterBrush As SolidBrush
     Dim WaterContainer As Panel
 
+#Region "Public properties..."
+    <Category("Watermark Attributes"), Description("Sets Watermark Text")> Public Property WatermarkText() As String
+        Get
+            Return WaterText
+        End Get
+        Set(ByVal value As String)
+            WaterText = value
+            Me.Invalidate()
+        End Set
+    End Property
+
+    <Category("Watermark Attributes"), Description("Sets Watermark Color")> Public Property WatermarkColor() As Color
+        Get
+            Return WaterColor
+        End Get
+        Set(ByVal value As Color)
+            WaterColor = value
+            Me.Invalidate()
+        End Set
+    End Property
+#End Region
+
     Public Sub New()
         MyBase.New()
         StartProcess()
@@ -71,23 +93,4 @@ Public Class WatermarkTextBox
         WaterContainer.Invalidate()
     End Sub
 
-    <Category("Watermark Attributes"), Description("Sets Watermark Text")> Public Property WatermarkText() As String
-        Get
-            Return WaterText
-        End Get
-        Set(ByVal value As String)
-            WaterText = value
-            Me.Invalidate()
-        End Set
-    End Property
-
-    <Category("Watermark Attributes"), Description("Sets Watermark Color")> Public Property WatermarkColor() As Color
-        Get
-            Return WaterColor
-        End Get
-        Set(ByVal value As Color)
-            WaterColor = value
-            Me.Invalidate()
-        End Set
-    End Property
 End Class
