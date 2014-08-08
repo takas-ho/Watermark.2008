@@ -27,6 +27,7 @@ Public Class WatermarkTextBox
         End Get
         Set(ByVal value As Color)
             WaterColor = value
+            WaterBrush = New SolidBrush(WaterColor)
             Me.Invalidate()
         End Set
     End Property
@@ -79,7 +80,6 @@ Public Class WatermarkTextBox
         WaterContainer.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         WaterContainer.Height = Me.Height
         WaterContainer.Width = Me.Width
-        WaterBrush = New SolidBrush(WaterColor)
 
         Dim Graphic As Graphics = e.Graphics
         Graphic.DrawString(WaterText, WaterFont, WaterBrush, New PointF(-2.0!, 1.0!))
