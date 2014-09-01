@@ -54,7 +54,6 @@ Public Class WatermarkTextBox
         'Assign Values To the Variables
         WaterText = "Default Watermark"
         WaterColor = Color.Gray
-        WaterFont = Me.Font
         WaterBrush = New SolidBrush(WaterColor)
 
         CreateWatermark()
@@ -92,7 +91,7 @@ Public Class WatermarkTextBox
         WaterContainer.Width = Me.Width
 
         Dim Graphic As Graphics = e.Graphics
-        Graphic.DrawString(WaterText, WaterFont, WaterBrush, New PointF(-2.0!, 1.0!))
+        Graphic.DrawString(WaterText, If(WaterFont, Me.Font), WaterBrush, New PointF(-2.0!, 1.0!))
     End Sub
 
     Protected Overrides Sub OnInvalidated(ByVal e As System.Windows.Forms.InvalidateEventArgs)
