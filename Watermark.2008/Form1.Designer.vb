@@ -102,6 +102,7 @@ Partial Class Form1
         Me.Watermark1.Size = New System.Drawing.Size(458, 19)
         Me.Watermark1.TabIndex = 0
         Me.Watermark1.WatermarkColor = System.Drawing.Color.Gray
+        Me.Watermark1.WatermarkFont = Nothing
         Me.Watermark1.WatermarkText = "Default Watermark"
         '
         'Form1
